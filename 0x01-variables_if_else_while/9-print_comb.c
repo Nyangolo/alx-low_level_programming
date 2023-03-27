@@ -1,21 +1,23 @@
 #include <stdio.h>
-#include <stdlib.h>
-#include <time.h>
 /**
- * main - Entry point
+ * main - Print all possible combinations of single-digit numbers.
+ * Return: Return 0 if passed.
  *
- * Return: Always 0 (Success)
  */
 int main(void)
 {
-	int d;
-	int x = ',';
-	int y = ' ';
-	for (d = '0xy'; d <= '9xy'; d++)
-{
-	putchar(d);
-}
-	putchar('\n');
+	int corn;
 
+	for (corn = '0' ; corn <= '9' ; corn++)
+	{
+		putchar(corn);
+
+		if (corn != '9')
+		{
+			putchar(',');
+			putchar(' ');
+		}
+	}
+	putchar('\n');
 	return (0);
 }

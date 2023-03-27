@@ -1,26 +1,26 @@
 #include <stdio.h>
-#include <stdlib.h>
-#include <time.h>
 /**
- * main - Entry point
- *
- * Return: Always 0 (Success)
+ * main - Print all prossible diffferent combination of two digits.
+ * Return: Return void.
  */
 int main(void)
 {
-	int d;
+	int num, num2;
 
-	for (d = 0; d < 100; d++)
+	for (num = '0'; num <= '9'; num++)
 	{
-		putchar((d / 10) + '0');
-		putchar((d % 10) + '0');
-		if (d != 99)
+		for (num2 = num + 1; num2 <= '9'; num2++)
 		{
+			putchar(num);
+			putchar(num2);
+			if (num == '8' && num2 == '9')
+			{
+				continue;
+			}
 			putchar(',');
 			putchar(' ');
 		}
 	}
 	putchar('\n');
-
 	return (0);
 }
