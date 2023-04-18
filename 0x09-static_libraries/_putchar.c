@@ -4,14 +4,13 @@
  *
  * Return: Always 0 (Success)
  */
-int main(void)
+int _putchar(char c)
 {
-	char *sh = "_putchar";
 
-	while (*sh)
+	while (c)
 	{
-		_putchar(*sh);
-		sh++;
+		_putchar(c);
+		c++;
 	}
 	_putchar('\n');
 
